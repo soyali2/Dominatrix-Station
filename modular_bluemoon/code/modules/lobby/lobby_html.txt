@@ -251,7 +251,7 @@ html, body {
 .bm-btn:hover::before { content:'\25BA'; opacity:1; }
 .bm-btn:active { color:#ff8; transform:translateX(2px); }
 
-/* Metashop: радуга — BM_METASHOP_RAINBOW_P в __lobby_defines.dm и bm_lobby.js (100 = всегда) */
+/* Metashop: радуга — BM_METASHOP_RAINBOW_P в __lobby_defines.dm и bm_lobby.js (100 = всегда)
 .bm-metashop { font-weight: 700; }
 @keyframes bm-ms-rainbow {
   0% { filter: hue-rotate(0deg); color: #8cf; }
@@ -270,6 +270,8 @@ html, body {
   pointer-events: none; flex-shrink: 0; display: block;
   font-size: 0; line-height: 0; overflow: hidden;
 }
+
+*/
 
 /* ===== КНОПКИ — СТИЛЬ BLUEMOON (неон) ===== */
 body.style-bluemoon #bm-sidebar {
