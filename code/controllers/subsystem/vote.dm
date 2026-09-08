@@ -661,14 +661,14 @@ SUBSYSTEM_DEF(vote)
 					var/list/roundtype_choices
 					if(use_dynamic_light_roundtype_vote_window())
 						secondary_roundtype = ROUNDTYPE_EXTENDED
-						roundtype_choices = list(ROUNDTYPE_DYNAMIC, secondary_roundtype)
+						roundtype_choices = list(secondary_roundtype)
 					else
 						secondary_roundtype = get_roundtype_vote_secondary_choice()
-						roundtype_choices = list(ROUNDTYPE_DYNAMIC, secondary_roundtype)
-					if(combo == ROUNDTYPE_ROTATION_HEAVY)
 						roundtype_choices = list(secondary_roundtype)
-					else if(combo == ROUNDTYPE_ROTATION_LIGHT)
-						roundtype_choices = list(ROUNDTYPE_DYNAMIC)
+//					if(combo == ROUNDTYPE_ROTATION_HEAVY)
+//						roundtype_choices = list(secondary_roundtype)
+//					if(combo == ROUNDTYPE_ROTATION_LIGHT)
+//						roundtype_choices = list(ROUNDTYPE_DYNAMIC)
 					choices |= roundtype_choices
 				sanitize_roundtype_vote_choices()
 			if("custom")
@@ -731,8 +731,8 @@ SUBSYSTEM_DEF(vote)
 	switch(roundtype)
 		if(ROUNDTYPE_EXTENDED, ROUNDTYPE_DYNAMIC_LIGHT)
 			return ROUNDTYPE_ROTATION_LIGHT
-		if(ROUNDTYPE_DYNAMIC_MEDIUM, ROUNDTYPE_DYNAMIC_HARD, ROUNDTYPE_DYNAMIC_TEAMBASED)
-			return ROUNDTYPE_ROTATION_HEAVY
+//		if(ROUNDTYPE_DYNAMIC_MEDIUM, ROUNDTYPE_DYNAMIC_HARD, ROUNDTYPE_DYNAMIC_TEAMBASED)
+//			return ROUNDTYPE_ROTATION_HEAVY
 	return null
 
 /datum/controller/subsystem/vote/proc/check_combo()

@@ -15,9 +15,9 @@ GLOBAL_VAR_INIT(midround_recorded, FALSE)
 	var/message = "Час пробил."
 	message += " [SSmapping.config.map_name] отжила своё."
 	var/combo = SSvote.check_combo()
-	if(combo == ROUNDTYPE_ROTATION_HEAVY)
-		message += " Экста грядёт..."
-	else if(combo == ROUNDTYPE_ROTATION_LIGHT)
-		message += " Динамик грядёт..."
+//	if(combo == ROUNDTYPE_ROTATION_HEAVY)
+//		message += " Экста грядёт..."
+//	else if(combo == ROUNDTYPE_ROTATION_LIGHT)
+//		message += " Динамик грядёт..."
 	to_chat(world, span_boldwarning(message))
 	message_admins("Мидраундовая запись режима и карты произведена.")
