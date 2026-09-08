@@ -14,7 +14,7 @@ GLOBAL_VAR_INIT(midround_recorded, FALSE)
 	GLOB.midround_recorded = TRUE
 	var/message = "Час пробил."
 	message += " [SSmapping.config.map_name] отжила своё."
-	var/combo = SSvote.check_combo()
+	//var/combo = SSvote.check_combo()
 //	if(combo == ROUNDTYPE_ROTATION_HEAVY)
 //		message += " Экста грядёт..."
 //	else if(combo == ROUNDTYPE_ROTATION_LIGHT)

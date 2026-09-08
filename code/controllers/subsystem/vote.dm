@@ -670,7 +670,7 @@ SUBSYSTEM_DEF(vote)
 				if(roundtype_prime_runoff_ballot)
 					choices |= list(ROUNDTYPE_DYNAMIC_LIGHT, ROUNDTYPE_EXTENDED)
 				else
-					var/combo = check_combo()
+					//var/combo = check_combo()
 					var/secondary_roundtype
 					var/list/roundtype_choices
 					if(use_dynamic_light_roundtype_vote_window())
