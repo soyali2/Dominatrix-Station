@@ -536,7 +536,7 @@ SUBSYSTEM_DEF(vote)
 		if(SSticker.current_state > GAME_STATE_PREGAME)
 			reset()
 			return .
-		var/fallback = pick_dynamic_type_by_chaos(GLOB.player_list, allow_light = !use_dynamic_light_roundtype_vote_window())
+		var/fallback = ROUNDTYPE_EXTENDED
 		SSpersistence.RecordDynamicType(fallback)
 		GLOB.round_type = fallback
 		GLOB.master_mode = fallback
